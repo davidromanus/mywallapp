@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{%if title%}
+	<title>{{title}}-Craze</title>
+	{%else%}
+	<title>Craze</title>
+	{%endif%}
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+	<script type="text/javascript" src="{{url_for('static',filename='script/bootstrap.bundle.min.js')}}"></script>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta name="description" content="Define your future today with BRAND Pension Management">
+</head>
+<body>
+	<nav class="navbar navbar-light" aria-label="First navbar example">
+    <div class="container">
+      <a class="navbar-brand" href="{{url_for('index')}}">MyWall</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample01">
+        <ul class="navbar-nav me-auto mb-2">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Get Support</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% block body %}
+{% endblock body %}
+<script>
+	window.onload = function(){
+	  // Change this value to however many seconds you want to delay the text by.
+	  var theDelay = 2;
+	  var timer = setTimeout("showText()",theDelay*1000)
+	}
+	function showText(){
+	  show=document.getElementById("delayedText");
+	  show.style.visibility = "visible";
+	}
+	</script>
+</body>
+</html>

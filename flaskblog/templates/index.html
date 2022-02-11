@@ -1,0 +1,141 @@
+{%extends 'base.html'%}
+{%block body%}
+
+ <div class="bg-light">
+   <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{{url_for('static',filename='hero.gif')}}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold lh-1 mb-3 text-primary">The World's First and Only Public Profile Software</h1>
+        <p class="lead">Quickly design and share responsive mobile-first public profiles with Avid, the world’s most popular public profile Software.Looking professional is very important and you don't need to spend a lot of time on it. We help you take away the stress of customization</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="{{url_for('register')}}" type="button" class="avid-btn btn-blue me-md-2">Start Now</a>
+          <a href="{{url_for('login')}}" type="button" class="btn btn-default btn-lg me-md-2">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ </div>
+  <section class="mt-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 p-2">
+          <h2 class="fw-bold">Get creative and build an accesible page with MyWall</h2>
+        </div>
+        <div class="col-lg-4 p-2">
+          <h4>It's Easy</h4>
+          <p class="lead text-muted">Just fill some forms and you're good to go!</p>
+        </div>
+        <div class="col-lg-4 p-2">
+           <h4>No Code</h4>
+          <p class="lead text-muted">Things doesn't always have to be complex.Right?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feedback mt-2">
+    <div class="container">
+      <div class="col-lg-12 row px-4 py-4 bg-light rounded">
+        <div class="col-lg-6">
+          <img src="{{url_for('static',filename='u1.jpg')}}" width="100%" e
+          height="500px" class="rounded">
+        </div>
+        <div class="col-lg-6 lh-1 m-auto p-5">
+            <h4 class="text-dark mt-3 mb-3">" Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</h4>
+            <p class="lead">John Doe, <span>Digital Marketer and interior decorator
+            </span></p>
+           <p class="lead"> <a href="#" class="text-success">Get Support</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center container px-4 py-4 mt-5">
+    <h1 class="display-5 fw-bold text-primary">
+      Join other
+    </h1>
+    <h1 class="display-5 fw-bold text-primary">
+      Professionals Around The World and build a Public Profile With MyWall
+    </h1>
+   <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <a href="{{url_for('register')}}" type="button" class="avid-btn btn-blue me-md-2">Start Now</a>
+        </div>
+  </section>
+
+
+  <div class="px-4 pt-5 my-5 text-center border-bottom bg-light">
+    <h1 class="display-4 fw-bold text-dark">Look Professional from the Start!</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Quickly design and customize responsive mobile-first profiles with MyWall, the world’s only public profile software</p>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="{{url_for('static',filename='sample.png')}}" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <section class="container feedback px-4 py-4 mt-4">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>Got Questions?</h1>
+        <p class="lead">We have great customer support and we would love to hear your questions and clear your doubts</p>
+      </div>
+      <div class="col-lg-6">
+        <form>
+          <h2>Subscribe To our Newsletter</h2>
+          <p class="lead text-info">We do not spam</p>
+          <div class="form-field">
+            <input type="email" name="email" placeholder="enter your email address" class="form-control">
+          </div>
+          <div class="form-field mt-1">
+            <button class="btn btn-primary btn-lg">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top container">
+    <div class="row">
+      <div class="col-12 col-md">
+        <h4 class="text-muted">&copy; MyWall 2022</h4>
+        <small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+          <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+{%endblock body%}

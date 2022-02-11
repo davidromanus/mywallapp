@@ -1,0 +1,74 @@
+{%extends 'base.html'%}
+{%block body%}
+	<div class="form px-5 py-5 justify-content-center">
+		<div class="register-form col-xl-8 bg-white shadwo-lg p-5 m-auto">
+			<form action="" method="POST" novalidate role="form" enctype=multipart/form-data>
+				{{form.hidden_tag()}}
+			<div>
+				<h2 class="text-muted">Personal</h2>
+				<div class="form-field m-1">
+					{{form.FirstName(class="form-control",placeholder="First Name")}}
+						{%for error in form.FirstName.errors%}
+						<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+
+				<div class="form-field m-1">
+					{{form.LastName(class="form-control",placeholder="Last Name")}}
+						{%for error in form.LastName.errors%}
+						<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+				<div class="form-field m-1">
+				{{form.phoneNumber(class="form-control",placeholder="phoneNumber")}}
+						{%for error in form.phoneNumber.errors%}
+						<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+
+				<div class="form-field m-1">
+					{{form.occupation(class="form-control",placeholder="What do you Do?")}}
+						{%for error in form.occupation.errors%}
+						<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+			</div>
+
+			<div>
+				<h2 class="text-muted">Account</h2>
+				<div class="form-field m-1" >
+					{{form.username(class="form-control",placeholder="username")}}
+						{%for error in form.username.errors%}
+					<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+
+				<div class="form-field m-1">
+					{{form.email(class="form-control",placeholder="email")}}
+						{%for error in form.email.errors%}
+						<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+
+				<div class="form-field m-1" >
+					{{form.password(class="form-control",placeholder="password")}}
+						{%for error in form.password.errors%}
+						<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+				<div class="form-field m-1">
+					{{form.confirm_password(class="form-control",placeholder="confirmpassword")}}
+						{%for error in form.confirm_password.errors%}
+					<p style="color:red;">{{error}}</p>
+				{%endfor%}
+				</div>
+
+				<div class="form-field m-1">
+					{{form.submit(class="btn btn-outline-primary btn-md")}}
+				</div>
+			</div>
+		</form>
+		<p class="text-info">Already have an account? <span><a href="{{url_for('login')}}">Login</a></span></p>
+		</div>
+	</div>
+{%endblock body%}

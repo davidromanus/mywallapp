@@ -1,0 +1,55 @@
+*{
+	box-sizing: border-box;
+}
+section{
+	padding:42px 0;
+}
+.main{
+	padding:60px 0;
+	background-image:url(hero.png);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment:fixed;
+
+}
+.brand{
+	position:absolute;
+	top:10px;
+	left:25px;
+}
+.frame{
+	padding:15px;
+	border-top:2px solid #ffffff;
+	border-left:2px solid #ffffff;
+	border-right:none;
+	border-bottom:none;
+	border-radius:5px;
+}
+.avid-btn{
+	padding:15px 30px;
+	border:none;
+	border-radius:25px;
+	background:rgb(0,149,255);
+	color:white;
+	font-size:24px;
+	text-decoration:none;
+	text-align: center;
+}
+
+.rounded-img{
+	border-radius: 50%;
+}
+.avid-btn:hover{
+	background:rgb(0,128,255);
+	color:white;
+}
+.form{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(bg.jpg);
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+.bg-white{
+	background:#ffffff;
+}
