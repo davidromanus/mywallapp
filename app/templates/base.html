@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{%if title%}
+	<title>{{title}}-AvidWall</title>
+	{%else%}
+	<title>AvidWall</title>
+	{%endif%}
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta name="description" content="Ugo is a profile page builder that gives you an easy way to tell the world who you are and what you do. Get started with Ugo today.">
+    <meta rel="favicon">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top bg-white navbar-light p-3 shadow-sm" aria-label="Fifth navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand display-5 fw-bold" href="{{url_for('index')}}">Ugo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample05">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="{{url_for('login')}}" class="nav-link fw-bold active">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url_for('register')}}" class="btn btn-primary ms-2">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    {%with messages =get_flashed_messages()%}
+    {%if messages%}
+       {%for m in messages%}
+          <p class="alert alert-info">{{m}}</p>
+          {%endfor%}
+         {%endif%}
+    {%endwith%}
+  </div>
+{% block body %}
+{% endblock body %}
+<script type="text/javascript" src="{{url_for('static',filename='script/bootstrap.bundle.min.js')}}"></script>
+<script type="text/javascript" src="{{url_for('static',filename='script/script.js')}}"></script>
+</body>
+</html>

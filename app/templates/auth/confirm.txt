@@ -1,0 +1,14 @@
+Dear {{ user.username }},
+
+
+Welcome to Ugo Profile!
+
+
+To confirm your account please click on the following link:
+
+{{ url_for('confirm', token=token, _external=True) }}
+
+Sincerely,
+The Ugo Profile Team
+
+Note: replies to this email address are not monitored.

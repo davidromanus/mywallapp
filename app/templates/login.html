@@ -1,0 +1,34 @@
+{%extends 'base.html'%}
+{%block body%}
+  <div class="col-xl-6 p-3 shadow-sm rounded my-5 m-auto justify-content-lg-start bg-white">
+    <div class="container">
+      <form action="" method="POST" novalidate role="form" enctype=multipart/form-data>
+              {{form.hidden_tag()}}
+            <div>
+              <h2 class="text-muted">Login</h2>
+              <div class="form-field m-1" >
+                <label class="text-muted">Username*</label>
+                {{form.username(class="form-control p-2",placeholder="username")}}
+                  {%for error in form.username.errors%}
+                <p style="color:red;">{{error}}</p>
+                {%endfor%}
+              </div>
+
+
+              <div class="form-field m-1" >
+                <label class="text-muted">Password*</label>
+                {{form.password(class="form-control p-2",placeholder="password")}}
+                  {%for error in form.password.errors%}
+                  <p style="color:red;">{{error}}</p>
+                {%endfor%}
+              </div>
+
+              <div class="form-field m-1">
+                {{form.submit(class="btn btn-outline-primary btn-md")}}
+              </div>
+            </div>
+          </form>
+          <p class="text-info">Don't have an account? <span><a href="{{url_for('register')}}">Register</a></span></p>
+    </div>
+  </div>
+{%endblock body%}

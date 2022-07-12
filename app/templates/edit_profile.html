@@ -1,0 +1,54 @@
+{%extends 'first-template.html'%}
+{%block body%}
+	
+	<div class="form px-5 py-5 justify-content-center">
+		<div class="register-form col-xl-8 bg-white p-5 m-auto">
+			<form action="" method="POST" class="shadwo-sm" novalidate role="form" enctype=multipart/form-data>
+				{{form.hidden_tag()}}
+			<div>
+				<h2 class="text-muted">Personal</h2>
+				<div class="form-field m-1">
+					<label class="text-secondary">Username*</label>
+					{{form.picture(class="form-control")}}
+						{%for error in form.picture.errors%}
+						<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+				<div class="form-field m-1">
+					<label class="text-secondary">Username*</label>
+					{{form.username(class="form-control",placeholder="Username")}}
+						{%for error in form.username.errors%}
+						<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+				<div class="form-field m-1">
+					<label class="text-secondary">Full Name*</label>
+					{{form.full_name(class="form-control",placeholder="Full Name")}}
+						{%for error in form.full_name.errors%}
+						<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+				<div class="form-field m-1">
+					<label class="text-secondary">Bio*</label>
+					{{form.bio(class="form-control",placeholder="Your Bio")}}
+						{%for error in form.bio.errors%}
+						<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+
+				<div class="form-field m-1" >
+					<label class="text-secondary">about_me*</label>
+					{{form.about_me(class="form-control",placeholder="Describe Yourself and what you Do")}}
+						{%for error in form.about_me.errors%}
+						<p style="color:red;">{{error}}</p>
+					{%endfor%}
+				</div>
+				<div class="form-field m-1">
+					{{form.submit(class="btn btn-outline-primary btn-md")}}
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+{%endblock body%}

@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+{%block body%}
+ 		<div class="dashboard">
+		<div class="sections">
+			<div class="flex-box shadow-lg">
+				<h4 class="mb-2">Admin Controls</h4>
+				<hr class="bg-light">
+				<ul class="nav-block">
+					<li><a href="{{url_for('index')}}" class="mb-2">Home</a></li>
+					<li><a href="#" class="mb-2">Users</a></li>
+					<li><a href="{{url_for('logout')}}" class="mb-2">Logout</a></li>
+				</ul>
+			</div>
+
+				<div class="container p-2 shadow-sm">
+					 <h2>User Table</h2>
+			      <div class="table-responsive">
+			        <table class="table table-striped table-sm">
+			          <thead>
+			            <tr>
+			              <th scope="col">ID</th>
+			              <th scope="col">USERNAME</th>
+			              <th scope="col">EMAIL</th>
+			              <th scope="col">FULL NAME</th>
+			              <th scope="col">ROLE</th>
+			              <th scope="col">DATE JOINED</th>
+			              <th scope="col">OPTIONS</th>
+			            </tr>
+			          </thead>
+			          <tbody>
+			          	{% for user in users %}
+			            <tr>
+			              <td>{{user.id}}</td>
+			              <td>{{user.username}}</td>
+			              <td>{{user.email}}</td>
+			              <td>{{user.full_name}}</td>
+			              <td>{{user.roles}}</td>
+			              <td>{{user.date_joined}}</td>
+			              <td><a href="#" class="btn btn-outline-dark btn-md">Edit</a></td>
+			            </tr>
+			            {% endfor %}
+			          </tbody>
+			        </table>
+			      </div>
+				</div>
+			</div>
+		</div>
+	</div>
+{%endblock body%}

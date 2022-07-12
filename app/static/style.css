@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+    margin:none;
+    padding:0;
+}
+.card{
+	width:100%;
+}
+
+@media (min-width:800px){
+	.card{
+		width:24rem;
+	}
+}
+.head-nav{
+	list-style:none;
+	display:flex;
+	justify-content:flex-end;
+}
+.head-nav .nav-item{
+	margin-left:5px;
+}
+.head-nav .nav-item:nth-child(1){
+	margin-right: auto;
+}
+.head-nav .nav-item a{
+	text-decoration:none;
+}
+@media (max-width:500px){
+	.increase{
+		height:100vh;
+	}
+}
+.bg-brand-blue{
+	background:#7A62D8;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+
+
+.rounded-border{
+  border:1px solid #fff;
+  border-radius:25px;
+  width:100px;
+  padding:5px;
+}
+.rounded-border:hover{
+  cursor:pointer;
+  background:#fff;
+  color:#000;
+  width:120px;
+  font-size:18px;
+  transition:ease-in-out;
+  transition-duration:0.3s;
+}
+@media (max-width:500px){
+  .rounded-border{
+   display:none;
+  }
+}
+.move-center{
+  text-align:center;
+}
+
+.card{
+  margin-top:0;
+}
+
+@media (min-width:900px){
+  .card{
+    margin-top:20px;
+  }
+}
+
+.dashboard{
+  width:100vw;
+}
+.dashboard .sections{
+  display:flex;
+}
+.sections .flex-box{
+  height:100vh;
+  padding:10px;
+  flex-grow:1;
+  flex-shrink:1;
+}
+.sections .flex-box:nth-child(1){
+  width:20vw;
+  height:100vh;
+  background:#fff;
+  position:static;
+}
+.nav-block{
+  list-style:none;
+  display:block;
+  justify-content:center;
+}
+
+.nav-block li{
+  margin-bottom:2.5rem;
+  padding:1px;
+  border-bottom:1px solid beige;
+}
+.nav-block li a{
+  font-size:19px;
+  text-decoration:none;
+}
+
+.nav-block li a:hover{
+  font-size:22px;
+}
+
+
+.hero{
+  padding:80px 40px;
+  height:80vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0.5,0,0,0.5)),url(hero.jpg);
+  background-position:top;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;  
+}
+
+.bg-pink{
+  color:#fff;
+  background:#fa4659;
+  outline:none;
+  border:none;
+  padding:10px 5px;
+  border-radius:12px;
+  width:200px;
+  text-decoration:none;
+}
+.bg-pink:hover{
+  background:#c7004c;
+  transform-style: ease;
+}
+
+.b-pink{
+  border:1px solid #fa4659;
+}

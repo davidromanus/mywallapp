@@ -1,0 +1,20 @@
+{%extends 'first-template.html'%}
+{%block body%}  
+  <div class="card text-center rounded shadow-lg m-auto increase">
+    {% if current_user.is_authenticated %}
+      <div class="card-header">
+      <ul class="head-nav">
+         <li class="nav-item"><a href="#" type="copy">ugo.xyz/{{current_user.username}}</a></li>
+        <li class="nav-item"><a href="{{url_for('edit_profile')}}">Edit Page</a></li>
+        <li class="nav-item"><a href="{{url_for('logout')}}">Logout</a></li>
+      </ul>
+    </div>
+    {% endif %}
+    <img src="{{picture}}" class="card-img-top" alt="...">
+    <div class="card-body bg-light">
+      <h4 class="card-title fw-bold font-lg">{{user.full_name}}</h4>
+      <p class="card-text text-muted">{{user.bio}}</p>
+      <p class="card-text p-3" style="font-size:24px;">{{user.about_me}}</p>
+    </div>
+  </div>
+{%endblock body%}

@@ -1,0 +1,8 @@
+{%extends 'base.html'%}
+{%block body%}
+<div class="text-center px-4 py-4 bg-brand-blue" style="height:100vh">
+	<h1 class="display-4 fw-bold text-white">An unexpected error has occured</h1>
+	<p>The site administrator has been notified. Sorry for the inconvenience</p>
+	<p><a href="{{url_for('login')}}" class="btn btn-light btn-lg">back</a></p>
+</div>
+{%endblock body%}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{%if title%}
+	<title>{{title}}-MyWall</title>
+	{%else%}
+	<title>MyWall</title>
+	{%endif%}
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='bootstrap.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body class="bg-brand-blue">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-white p-2" aria-label="Fifth navbar example">
+	    <div class="container">
+	      <a class="navbar-brand text-primary fw-bold" href="{{url_for('register')}}">Ugo</a>
+	    </div>
+	  </nav>
+	<div class="container mt-2">
+    {%with messages =get_flashed_messages()%}
+    {%if messages%}
+       {%for m in messages%}
+          <p class="alert alert-info">{{m}}</p>
+          {%endfor%}
+         {%endif%}
+    {%endwith%}
+  </div>
+{% block body %}
+{% endblock body %}
+<script type="text/javascript" src="{{url_for('static',filename='script/bootstrap.bundle.min.js')}}"></script>
+  <script type="text/javascript" src="{{url_for('static',filename='script/dashboard.js')}}"></script>
+</body>
+</html>

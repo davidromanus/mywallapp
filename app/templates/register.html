@@ -1,0 +1,58 @@
+{%extends 'base.html'%}
+{%block body%}
+	<div class="form-box col-xl-8 shadow-lg me-auto ms-auto my-3 rounded bg-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 p-3">
+					<form action="" method="POST" novalidate role="form" enctype=multipart/form-data>
+				{{form.hidden_tag()}}
+						<div>
+							<h2 class="display-4 fw-bold">Welcome to <strong class="text-primary">Ugo</strong></h2>
+							<p class="text-muted">Building a profile page is easier with Ugo</p>
+							<div class="form-field m-1">
+								<label class="text-secondary">Username*</label>
+								{{form.username(class="form-control p-2",placeholder="Username")}}
+									{%for error in form.username.errors%}
+									<p style="color:red;">{{error}}</p>
+								{%endfor%}
+							</div>
+							<div class="form-field m-1">
+								<label class="text-secondary">Email*</label>
+								{{form.email(class="form-control p-2",placeholder="email")}}
+									{%for error in form.email.errors%}
+									<p style="color:red;">{{error}}</p>
+								{%endfor%}
+							</div>
+
+							<div class="form-field m-1" >
+								<label class="text-secondary">Password*</label>
+								{{form.password(class="form-control p-2",placeholder="password")}}
+									{%for error in form.password.errors%}
+									<p style="color:red;">{{error}}</p>
+								{%endfor%}
+							</div>
+							<div class="form-field m-1">
+								<label class="text-secondary">Username*</label>
+								{{form.picture(class="form-control")}}
+									{%for error in form.picture.errors%}
+									<p style="color:red;">{{error}}</p>
+								{%endfor%}
+							</div>
+							<div class="form-field m-2 row">
+								<p class="col">
+									{{form.submit(class="btn btn-primary btn-md")}}
+								</p>
+								<p class="text-info col text-start">Already have an account? <span><a href="{{url_for('login')}}">login</a>
+								</span></p>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="col-lg-5 p-4 text-center align-items-center bg-primary" style="height:80vh;">
+					<h1 class="display-4 fw-bold my-5 text-white mb-2">Build your page</h1>
+					<p class="text-white">Build, customize and share your profile page in 3 minutes with ugo. It's easy, free and friendly.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{%endblock body%}
